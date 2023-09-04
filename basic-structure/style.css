@@ -1,0 +1,65 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.head-content {
+  background-color: darkgray;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-content,
+.contact {
+  background-color: rgb(128, 128, 128);
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.navigation-content {
+  list-style-type: none;
+}
+
+.doc-title {
+  padding: 25px;
+}
+
+article + article {
+  border-top: 3px solid black;
+  margin-top: 60px;
+}
+
+header > ul > li {
+  margin-top: 10px;
+  color: red;
+}
+
+header > ul > li > a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header > ul > li > a:visited {
+  color: black;
+}
+
+header > ul > li > a:hover {
+  color: blue;
+}
+
+header > ul > li > a:active {
+  color: green;
+}

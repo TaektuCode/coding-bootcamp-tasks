@@ -63,3 +63,20 @@ header > ul > li > a:hover {
 header > ul > li > a:active {
   color: green;
 }
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+h1 ~ p::after {
+  content: "🖥️";
+}
+
+h1 ~ p + p::after {
+  content: "📈️";
+}
+
+h1 ~ p:nth-child(4)::after {
+  content: "🎓️🖥️🖱️";
+}

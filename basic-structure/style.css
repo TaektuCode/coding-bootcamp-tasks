@@ -1,4 +1,4 @@
-* {
+html {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
@@ -24,7 +24,7 @@ h3 {
 .main-content,
 .contact {
   background-color: rgb(128, 128, 128);
-  padding: 40px;
+  padding: 20px;
   max-width: 800px;
   margin: 0 auto;
 }

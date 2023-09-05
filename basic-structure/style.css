@@ -4,6 +4,18 @@ html {
   font-size: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -44,10 +56,26 @@ h1 + p {
   cursor: default;
 }
 
+@media screen and (min-width: 992px) {
+  .hire-me-badge {
+    position: fixed;
+  }
+}
+
 .hire-me-badge:hover {
   color: white;
   background-color: green;
   border: 0.2rem solid white;
+}
+
+@media print {
+  .hire-me-badge {
+    display: none;
+  }
+
+  .navigation-content {
+    display: none;
+  }
 }
 
 .main-content,

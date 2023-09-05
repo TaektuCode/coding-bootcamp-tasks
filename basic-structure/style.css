@@ -37,6 +37,15 @@ h3 {
   padding: 25px;
 }
 
+#experience > h2 {
+  display: inline-block;
+}
+
+#experience > h2 + p {
+  display: inline-block;
+  margin: 10px;
+}
+
 article + article {
   border-top: 3px solid black;
   margin-top: 60px;

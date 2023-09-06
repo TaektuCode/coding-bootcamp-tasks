@@ -43,6 +43,44 @@ h1 + p {
   position: relative;
 }
 
+.nav__flexcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background-color: rgb(128, 128, 128);
+  align-items: center;
+}
+
+.nav__flex-item {
+  padding: 0.4rem 0;
+  margin: 0.5rem 0;
+  background-color: darkgray;
+  min-width: 7rem;
+}
+
+.exp__flexcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp__flex-item {
+  margin: 0;
+}
+
+nav > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+nav > a:hover {
+  color: green;
+}
+
+nav > a:active {
+  color: rgb(61, 214, 61);
+}
+
 .hire-me-badge {
   position: absolute;
   top: 0.8rem;
@@ -56,16 +94,40 @@ h1 + p {
   cursor: default;
 }
 
-@media screen and (min-width: 992px) {
-  .hire-me-badge {
-    position: fixed;
-  }
-}
-
 .hire-me-badge:hover {
   color: white;
   background-color: green;
   border: 0.2rem solid white;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__flexcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: rgb(128, 128, 128);
+  }
+
+  .nav__flex-item {
+    text-decoration: none;
+    padding: 0 1rem;
+    margin: 0.2rem;
+    background-color: darkgrey;
+  }
+
+  .exp__flexcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me-badge {
+    position: fixed;
+  }
 }
 
 @media print {
@@ -73,7 +135,7 @@ h1 + p {
     display: none;
   }
 
-  .navigation-content {
+  .nav__flexcontainer {
     display: none;
   }
 }
@@ -109,12 +171,7 @@ article + article {
   margin-top: 2rem;
 }
 
-header > ul > li {
-  margin-top: 0.5rem;
-  color: red;
-}
-
-header > ul > li > a {
+/* header > ul > li > a {
   font-weight: bold;
   text-decoration: none;
 }
@@ -129,7 +186,7 @@ header > ul > li > a:hover {
 
 header > ul > li > a:active {
   color: green;
-}
+} */
 
 ::selection {
   background-color: black;

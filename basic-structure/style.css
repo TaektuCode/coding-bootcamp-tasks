@@ -2,7 +2,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   font-size: 16px;
-  background-color: black;
+  background-color: var(--theme-color);
 }
 body {
   margin: 0;
@@ -18,6 +18,20 @@ h3 {
   background-color: black;
   color: white;
 }
+
+/*========================================
+------------CUSTOM PROPERTIES-------------
+========================================*/
+
+:root {
+  --theme-color: black;
+  --main-color: rgb(128, 128, 128);
+  --secondary-color: white;
+  --border-color: black;
+  --text-color: black;
+  --nav-item-color: darkgrey;
+}
+
 /*========================================
 ------------------HEADER------------------
 ========================================*/
@@ -30,8 +44,8 @@ h3 {
 }
 
 .head-content {
-  background-image: linear-gradient(white, rgb(128, 128, 128));
-  border-bottom: 0.2rem solid black;
+  background-image: linear-gradient(var(--secondary-color), var(--main-color));
+  border-bottom: 0.2rem solid var(--border-color);
   padding: 20px;
   text-align: center;
   max-width: 40rem;
@@ -48,21 +62,21 @@ h3 {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  background-color: rgb(128, 128, 128);
+  background-color: var(--main-color);
   align-items: center;
 }
 
 .nav__flex-item {
   padding: 0.4rem 0;
+  background-color: var(--nav-item-color);
   margin: 0.5rem 0;
-  background-color: darkgray;
   min-width: 7rem;
 }
 
 .nav-link {
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: var(--text-color);
 }
 
 .nav-link:hover {
@@ -91,7 +105,7 @@ h3 {
   right: 1rem;
   padding: 0.5rem;
   border-radius: 1rem;
-  border: 0.2rem solid black;
+  border: 0.2rem solid var(--border-color);
   background-color: red;
   width: 3rem;
   font-weight: bold;
@@ -109,7 +123,7 @@ h3 {
 ========================================*/
 
 .main-content {
-  background-color: rgb(128, 128, 128);
+  background-color: var(--main-color);
   padding: 1rem;
   max-width: 45rem;
   margin: 0 auto;
@@ -131,7 +145,7 @@ h3 {
 }
 
 article + article {
-  border-top: 0.2rem solid black;
+  border-top: 0.2rem solid var(--border-color);
   margin-top: 2rem;
 }
 
@@ -140,8 +154,8 @@ article + article {
 ========================================*/
 
 .contact {
-  border-top: 0.2rem solid black;
-  background-image: linear-gradient(rgb(128, 128, 128), white);
+  border-top: 0.2rem solid var(--border-color);
+  background-image: linear-gradient(var(--main-color), var(--secondary-color));
   padding: 1rem;
   max-width: 40rem;
   margin: 0 auto;
@@ -149,7 +163,7 @@ article + article {
 
 .email {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
 .email:hover {
@@ -161,7 +175,7 @@ article + article {
 }
 
 .tel {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -194,14 +208,14 @@ article + article {
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
-    background-color: rgb(128, 128, 128);
+    background-color: var(--main-color);
   }
 
   .nav__flex-item {
     text-decoration: none;
     padding: 0 1rem;
     margin: 0.2rem;
-    background-color: darkgrey;
+    background-color: var(--nav-item-color);
   }
 
   .exp__flexcontainer {

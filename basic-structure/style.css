@@ -2,20 +2,8 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   font-size: 16px;
+  background-color: black;
 }
-
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 20px;
-  }
-}
-
 body {
   margin: 0;
 }
@@ -26,21 +14,34 @@ h3 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-h1 {
+::selection {
+  background-color: black;
+  color: white;
+}
+/*========================================
+------------------HEADER------------------
+========================================*/
+.header-name {
   font-size: 1em;
 }
 
-h1 + p {
+.header-profession {
   font-size: 0.25em;
 }
 
 .head-content {
-  background-color: darkgray;
+  background-image: linear-gradient(white, rgb(128, 128, 128));
+  border-bottom: 0.2rem solid black;
   padding: 20px;
   text-align: center;
-  max-width: 800px;
+  max-width: 40rem;
   margin: 0 auto;
   position: relative;
+}
+
+.name_profession {
+  padding: 1rem;
+  font-size: 4rem;
 }
 
 .nav__flexcontainer {
@@ -58,27 +59,30 @@ h1 + p {
   min-width: 7rem;
 }
 
-.exp__flexcontainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.exp__flex-item {
-  margin: 0;
-}
-
-nav > a {
+.nav-link {
   text-decoration: none;
   font-weight: bold;
   color: black;
 }
 
-nav > a:hover {
+.nav-link:hover {
   color: green;
 }
 
-nav > a:active {
+.nav-link:active {
   color: rgb(61, 214, 61);
+}
+
+.header-profession::after {
+  content: "🖥️";
+}
+
+.header-job::after {
+  content: "📈️";
+}
+
+.header-future-profession:nth-child(4)::after {
+  content: "🎓️🖥️🖱️";
 }
 
 .hire-me-badge {
@@ -98,6 +102,90 @@ nav > a:active {
   color: white;
   background-color: green;
   border: 0.2rem solid white;
+}
+
+/*========================================
+-------------------MAIN-------------------
+========================================*/
+
+.main-content {
+  background-color: rgb(128, 128, 128);
+  padding: 1rem;
+  max-width: 45rem;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+}
+
+.main-content-header {
+  position: relative;
+  right: 0.8rem;
+}
+
+.exp__flexcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp__flex-item {
+  margin: 0;
+}
+
+article + article {
+  border-top: 0.2rem solid black;
+  margin-top: 2rem;
+}
+
+/*========================================
+------------------FOOTER------------------
+========================================*/
+
+.contact {
+  border-top: 0.2rem solid black;
+  background-image: linear-gradient(rgb(128, 128, 128), white);
+  padding: 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.email {
+  text-decoration: none;
+  color: black;
+}
+
+.email:hover {
+  font-weight: bold;
+}
+
+.email::after {
+  content: " 📧";
+}
+
+.tel {
+  color: black;
+  text-decoration: none;
+}
+
+.tel:hover {
+  font-weight: bold;
+}
+
+.tel::after {
+  content: " ☎️";
+}
+
+/*========================================
+-------------------MEDIA------------------
+========================================*/
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -138,74 +226,4 @@ nav > a:active {
   .nav__flexcontainer {
     display: none;
   }
-}
-
-.main-content,
-.contact {
-  background-color: rgb(128, 128, 128);
-  padding: 1rem;
-  max-width: 80ch;
-  margin: 0 auto;
-}
-
-.navigation-content {
-  list-style-type: none;
-}
-
-.name_profession {
-  padding: 1rem;
-  font-size: 4rem;
-}
-
-#experience > h2 {
-  display: inline-block;
-}
-
-#experience > h2 + p {
-  display: inline-block;
-  margin: 1rem;
-}
-
-article + article {
-  border-top: 0.2rem solid black;
-  margin-top: 2rem;
-}
-
-/* header > ul > li > a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-header > ul > li > a:visited {
-  color: black;
-}
-
-header > ul > li > a:hover {
-  color: blue;
-}
-
-header > ul > li > a:active {
-  color: green;
-} */
-
-::selection {
-  background-color: black;
-  color: white;
-}
-
-h1 ~ p::after {
-  content: "🖥️";
-}
-
-h1 ~ p + p::after {
-  content: "📈️";
-}
-
-h1 ~ p:nth-child(4)::after {
-  content: "🎓️🖥️🖱️";
-}
-
-.main-content-header {
-  position: relative;
-  right: 0.8rem;
 }

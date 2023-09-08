@@ -71,16 +71,24 @@ h3 {
   background-color: var(--nav-item-color);
   margin: 0.5rem 0;
   min-width: 7rem;
+  transition: background-color 300ms ease-in;
+}
+
+.nav__flex-item:hover {
+  background-color: var(--theme-color);
 }
 
 .nav-link {
+  display: inline-block;
   text-decoration: none;
   font-weight: bold;
+  width: 100%;
   color: var(--text-color);
+  transition: color 300ms ease-in;
 }
 
 .nav-link:hover {
-  color: green;
+  color: var(--secondary-color);
 }
 
 .nav-link:active {
@@ -213,7 +221,7 @@ article + article {
 
   .nav__flex-item {
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0;
     margin: 0.2rem;
     background-color: var(--nav-item-color);
   }

@@ -109,15 +109,20 @@ h3 {
 
 .hire-me-badge {
   position: absolute;
-  top: 0.8rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 23rem;
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 50%;
   border: 0.2rem solid var(--border-color);
   background-color: red;
   width: 3rem;
   font-weight: bold;
   cursor: default;
+}
+
+.head-content:hover .hire-me-badge {
+  transition: transform 1s;
+  transform: scale(1.2);
 }
 
 .hire-me-badge:hover {

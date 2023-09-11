@@ -110,7 +110,7 @@ h3 {
 .hire-me-badge {
   position: absolute;
   top: 0.5rem;
-  right: 23rem;
+  right: 0.5rem;
   padding: 0.5rem;
   border-radius: 50%;
   border: 0.2rem solid var(--border-color);
@@ -146,6 +146,7 @@ h3 {
 .main-content-header {
   position: relative;
   right: 0.8rem;
+  margin-top: 1rem;
 }
 
 .exp__flexcontainer {
@@ -229,6 +230,15 @@ article + article {
     padding: 0;
     margin: 0.2rem;
     background-color: var(--nav-item-color);
+  }
+
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-wrapper {
+    margin: 2rem;
   }
 
   .exp__flexcontainer {
